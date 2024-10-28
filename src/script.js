@@ -11,11 +11,20 @@ hamburger.addEventListener('click', () => {
 window.onscroll = function () {
   const header = document.querySelector('header');
   const fixedNav = header.offsetTop;
+  const toHome = document.querySelector('.btn-to-home');
+  const about = document.querySelector('#about');
+  const fixedHome = home.offsetTop;
 
   if (window.scrollY > fixedNav) {
     header.classList.add('navbar-fixed');
   } else {
     header.classList.remove('navbar-fixed');
+  }
+
+  if (window.scrollY > about) {
+    toHome.classList.remove('hidden');
+  } else {
+    toHome.classList.add('hidden');
   }
 };
 

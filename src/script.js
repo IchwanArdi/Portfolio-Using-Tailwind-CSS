@@ -13,7 +13,7 @@ window.onscroll = function () {
   const fixedNav = header.offsetTop;
   const toHome = document.querySelector('.btn-to-home');
   const about = document.querySelector('#about');
-  const fixedHome = home.offsetTop;
+  const fixedabout = about.offsetTop;
 
   if (window.scrollY > fixedNav) {
     header.classList.add('navbar-fixed');
@@ -21,7 +21,7 @@ window.onscroll = function () {
     header.classList.remove('navbar-fixed');
   }
 
-  if (window.scrollY > about) {
+  if (window.scrollY > fixedabout) {
     toHome.classList.remove('hidden');
   } else {
     toHome.classList.add('hidden');
